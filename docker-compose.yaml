@@ -1,0 +1,28 @@
+# Use for running a single service for local dev
+version: "3.9"  
+
+services:
+  base: &base
+    build: .
+
+  test: 
+    <<: *base
+    command: "test"
+
+  zero_shot_text_classification:
+    <<: *base
+    container_name: zero_shot_text_classification
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health_check"]
+      interval: 5s
+      timeout: 30s
+      retries: 5
+    user: user
+    command: "serve"
+    ports:
+      - 8080:8080
+    networks:
+      - ai-hero-internal
+
+networks:
+  ai-hero-internal:
