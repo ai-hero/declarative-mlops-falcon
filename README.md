@@ -1,6 +1,6 @@
 # Containerize your ML models using Falcon.
 
-This repo is companion code to the article [Deploying ML Models Using Containers in Three Ways](https://medium.com/@rparundekar/deploying-ml-models-using-containers-in-three-ways-14745af94043) I've published on Medium. They both go together. :)
+This repo is companion code to the article [Containerizing and Serving an ML Model with Falcon](https://medium.com/@rparundekar/containerizing-and-serving-an-ml-model-with-falcon-21723133cde0) I've published on Medium. They both go together. :)
 
 The repo contains code for a basic container to serve ML models as an HTTP service using Falcon.
 

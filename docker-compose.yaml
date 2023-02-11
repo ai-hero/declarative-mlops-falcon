@@ -22,7 +22,7 @@ services:
     ports:
       - 8080:8080
     networks:
-      - ai-hero-internal
+      - declarative-mlops
 
 networks:
-  ai-hero-internal:
+  declarative-mlops:

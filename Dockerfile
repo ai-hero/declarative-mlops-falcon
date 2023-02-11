@@ -11,10 +11,6 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends build-essent
 # PATH so that the train and serve programs are found when the container is invoked.
 ENV PYTHONUNBUFFERED=TRUE PYTHONDONTWRITEBYTECODE=TRUE PATH="/home/user/app:${PATH}" PYTHONPATH="/home/user/app:${PYTHONPATH}"
 
-# Install dependencies
-COPY app/requirements.txt requirements.txt
-RUN pip install -r requirements.txt    
-
 # Add non-root user
 RUN groupadd -r user && useradd -r -g user user
 RUN chown -R user /var/log/nginx /var/lib/nginx /tmp
@@ -23,6 +19,10 @@ RUN chown -R user /var/log/nginx /var/lib/nginx /tmp
 RUN mkdir /home/user
 RUN chown -R user /home/user
 WORKDIR /home/user
+
+# Install dependencies
+COPY app/requirements.txt requirements.txt
+RUN pip install -r requirements.txt    
 
 # Download the model into user home directory, using the user, so that it can be loaded.
 USER user 

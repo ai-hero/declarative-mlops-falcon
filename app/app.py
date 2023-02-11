@@ -1,6 +1,5 @@
 import traceback
 import falcon
-import falcon.asgi
 from falcon import Request, Response
 from routes.health_check import HealthCheck
 from routes.predict import Predict
