@@ -6,4 +6,4 @@ run:
 	docker-compose up --build zero_shot_text_classification
 
 test:
-	docker-compose run --build test 
+	docker-compose run --build zero_shot_text_classification test 
