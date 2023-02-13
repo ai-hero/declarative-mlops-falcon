@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
+      - name: Build the container
+        run: docker build .
       - name: Run tests inside container
-        run: docker-compose up --build test 
+        run: docker-compose run test 

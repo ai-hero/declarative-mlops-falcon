@@ -2,8 +2,8 @@
 build:
 	docker build . -t zero_shot_text_classification:latest
 
-run: 
-	docker-compose up --build run 
+run: build
+	docker-compose up run 
 
-test: 
-	docker-compose run --build test 
+test: build
+	docker-compose run test 
