@@ -1,9 +1,9 @@
 # Used for local development
 build:
-	docker build . -t zero_shot_text_classification:latest
+	docker build .
 
-run:
-	docker-compose up run 
+run: 
+	docker compose up --build run 
 
-test:
-	docker-compose run test 
+test: 
+	docker compose run --build test 
