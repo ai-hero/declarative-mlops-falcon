@@ -4,7 +4,7 @@ This repo is companion code to the article [Containerizing and Serving an ML Mod
 
 The repo contains code for a basic container to serve ML models as an HTTP service using Falcon.
 
-# Serving the model using an HTTP endpoint
+# Serving the model using an HTTP endpoint.
 
 ## Pre-requisites
 
