@@ -1,0 +1,16 @@
+name: Test on PR
+on:
+  pull_request:
+    branches: ["main"]
+permissions:
+  contents: read # This is required for actions/checkout
+jobs:
+  build:
+    name: Test on Commit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Run tests inside container
+        run: |
+          make test
