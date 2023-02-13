@@ -1,14 +1,12 @@
 name: Test on PR
 on:
-  push:
-    branches: ["*"]
   pull_request:
     branches: ["main"]
 permissions:
   contents: read # This is required for actions/checkout
 jobs:
   build:
-    name: Test on Commit
+    name: Test on PR
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
