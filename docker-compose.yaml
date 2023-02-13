@@ -9,7 +9,7 @@ services:
     <<: *base
     command: "test"
 
-  zero_shot_text_classification:
+  run:
     <<: *base
     container_name: zero_shot_text_classification
     healthcheck:
