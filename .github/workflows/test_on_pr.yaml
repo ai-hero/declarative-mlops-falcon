@@ -6,11 +6,10 @@ permissions:
   contents: read # This is required for actions/checkout
 jobs:
   build:
-    name: Test on Commit
+    name: Test on PR
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
       - name: Run tests inside container
-        run: |
-          make test
+        run: docker compose run --build test 
