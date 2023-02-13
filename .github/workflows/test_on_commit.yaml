@@ -12,5 +12,4 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
       - name: Run tests inside container
-        run: |
-          docker-compose run -f "docker-compose.yaml" --build test 
+        run: docker-compose run -f "docker-compose.yaml" --build test 
