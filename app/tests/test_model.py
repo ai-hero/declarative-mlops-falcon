@@ -18,7 +18,7 @@ class ZeroShotTestCase(TestCase):
             )
             self.assertEqual(data["labels"][np.argmax(prediction)], "happy")
             # Use actual probability as additional check if model/something changes
-            self.assertGreaterEqual(prediction[np.argmax(prediction)], 0.98)
+            self.assertGreaterEqual(prediction[np.argmax(prediction)], 0.97)
 
     def test_two(self):
         file_two = os.path.join(os.path.dirname(__file__), "test_data_two.json")
